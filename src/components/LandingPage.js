@@ -2,7 +2,7 @@ import React from "react";
 import DevImg from "../assets/dev.svg";
 import styled from "styled-components";
 import { colors } from "../assets/constants";
-import { faHand } from "@fortawesome/free-solid-svg-icons";
+import { faHand, faDownload } from "@fortawesome/free-solid-svg-icons";
 import {
   faReact,
   faJs,
@@ -35,11 +35,13 @@ const LandingPage = () => {
         </h2>
         <DescText>
           I'm Tarun, a Full Stack Web Developer having experience in developing
-          web and mobile based application using React and React Native.
+          web and mobile based applications using React and React Native. I have got
+          1+ years of experience in developing web applications and looking for 
+          opportunities to learn, grow and develop.
         </DescText>
       </div>
       <ImgContainer>
-        <img src={DevImg} style={{ height: "90%", width: "100%" }} />
+        <img src={DevImg} style={{ height: "90%", width: "100%" }} alt={"img"} />
       </ImgContainer>
       <IconsContainer>
         <div>
@@ -85,7 +87,9 @@ const LandingPage = () => {
       </IconsContainer>
       <BtnContainer>
         <span>Looking for developer?</span>
-        <Button>Download Resume</Button>
+        <Button>Download Resume
+          <FontAwesomeIcon icon={faDownload} size="1x" color={colors.textColor1} />
+        </Button>
         <Button>Hire me!!!</Button>
       </BtnContainer>
       <Polygon />
@@ -105,7 +109,10 @@ const ImgContainer = styled.div`
     width: 80%;
     position: relative;
     top: 0;
-    right: 0;
+    right: -50px;
+  }
+  @media (max-width:500px){
+    right:-20px;
   }
 `;
 
@@ -140,6 +147,7 @@ const BtnContainer = styled.div`
   color: #fff;
   margin: 40px 25px;
   flex-wrap: wrap;
+  gap:10px;
   @media (max-width: 778px) {
     justify-content: center;
   }
@@ -154,19 +162,32 @@ const Button = styled.div`
   cursor: pointer;
   box-shadow: inset 0 0 0 0 ${colors.textColor1};
   font-weight: bold;
-  border-radius: 25px;
+  border-radius: 5px;
   margin: 10px;
   &:hover {
     box-shadow: inset 300px 0 0 0 ${colors.textColor1};
     color: #fff;
+    > * {
+      &:first-child{
+        // margin-left:10px;
+        color:#fff;
+        transition: 1s;
+       }
+    }
+  }
+  > * {
+  &:first-child{
+    margin-left:10px;
+   }
   }
 `;
 
 const Polygon = styled.div`
-  clip-path: polygon(0% 100%, 100% 100%, 0% 0%);
-  height: 110px;
+  clip-path: polygon(100% 0%,-50% 100%,100% 100%, 100% 100%);;
+  height: 130px;
   width: 100%;
   background-color: ${colors.textColor1};
+  z-index:-99;
 `;
 
 export default LandingPage;
