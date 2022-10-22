@@ -1,14 +1,14 @@
-import styled from "styled-components";
-import React, { useState } from "react";
-import DevImg from "../assets/dev.svg";
+import styled from 'styled-components';
+import React, { useState } from 'react';
+import DevImg from '../assets/svg/dev.svg';
 
 const Carousel = (props) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const handleSlideChange = (mode) => {
-    if (mode == "prev" && currentSlide > 0) {
+    if (mode == 'prev' && currentSlide > 0) {
       setCurrentSlide(currentSlide - 1);
-    } else if (mode == "next" && currentSlide < 2) {
+    } else if (mode == 'next' && currentSlide < 2) {
       setCurrentSlide(currentSlide + 1);
     } else {
       return;
@@ -20,10 +20,10 @@ const Carousel = (props) => {
         <CarouselList index={currentSlide}></CarouselList>
         <CarouselList index={currentSlide}>2</CarouselList>
         <CarouselList index={currentSlide}>3</CarouselList>
-        <Button type={"prev"} onClick={() => handleSlideChange("prev")}>
+        <Button type={'prev'} onClick={() => handleSlideChange('prev')}>
           &#11164;
         </Button>
-        <Button type={"next"} onClick={() => handleSlideChange("next")}>
+        <Button type={'next'} onClick={() => handleSlideChange('next')}>
           &#11166;
         </Button>
       </CarouselWrapper>
@@ -58,8 +58,8 @@ const Button = styled.div`
   opacity: 0.3;
   position: absolute;
   top: 50%;
-  left: ${(props) => props.type == "prev" && 0};
-  right: ${(props) => props.type == "next" && 0};
+  left: ${(props) => props.type == 'prev' && 0};
+  right: ${(props) => props.type == 'next' && 0};
   &:hover {
     color: #fff;
     opacity: 0.7;

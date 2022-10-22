@@ -1,85 +1,89 @@
-import React from "react";
-import DevImg from "../assets/dev.svg";
-import styled from "styled-components";
-import { colors } from "../assets/constants";
-import { faHand, faDownload } from "@fortawesome/free-solid-svg-icons";
+import React from 'react';
+import DevImg from '../assets/svg/dev.svg';
+import styled from 'styled-components';
+import { colors } from '../assets/constants';
+import { faHand, faDownload } from '@fortawesome/free-solid-svg-icons';
 import {
   faReact,
   faJs,
   faCss3,
   faHtml5,
   faNodeJs,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const LandingPage = () => {
   return (
-    <div style={{ height: "85%", width: "100%", paddingTop: "50px" }}>
-      <div style={{ padding: "50px 20px", boxSizing: "border-box" }}>
+    <div style={{ height: '85%', width: '100%', paddingTop: '50px' }}>
+      <div style={{ padding: '50px 20px', boxSizing: 'border-box' }}>
         <h2
           style={{
             backgroundColor: `${colors.textColor1}`,
-            color: "#fefefe",
-            width: "max-content",
-            padding: "10px 30px",
-            borderTopLeftRadius: "20px",
-            borderTopRightRadius: "1px",
-            borderBottomRightRadius: "20px",
-            borderBottomLeftRadius: "1px",
+            color: '#fefefe',
+            width: 'max-content',
+            padding: '10px 30px',
+            borderTopLeftRadius: '20px',
+            borderTopRightRadius: '1px',
+            borderBottomRightRadius: '20px',
+            borderBottomLeftRadius: '1px',
           }}
         >
           Hello
-          <span style={{ marginLeft: "5px" }}>
-            <FontAwesomeIcon icon={faHand} size="1x" color={"gold"} />
+          <span style={{ marginLeft: '5px' }}>
+            <FontAwesomeIcon icon={faHand} size="1x" color={'gold'} />
           </span>
         </h2>
         <DescText>
           I'm Tarun, a Full Stack Web Developer having experience in developing
-          web and mobile based applications using React and React Native. I have got
-          1+ years of experience in developing web applications and looking for 
-          opportunities to learn, grow and develop.
+          web and mobile based applications using React and React Native. I have
+          got 1+ years of experience in developing web applications and looking
+          for opportunities to learn, grow and develop.
         </DescText>
       </div>
       <ImgContainer>
-        <img src={DevImg} style={{ height: "90%", width: "100%" }} alt={"img"} />
+        <img
+          src={DevImg}
+          style={{ height: '90%', width: '100%' }}
+          alt={'img'}
+        />
       </ImgContainer>
       <IconsContainer>
         <div>
-          <FontAwesomeIcon icon={faHtml5} color={"#dd4b25"} size="3x" />
+          <FontAwesomeIcon icon={faHtml5} color={'#dd4b25'} size="3x" />
           <p
-            style={{ color: "#d0cde1", textAlign: "center", fontSize: "14px" }}
+            style={{ color: '#d0cde1', textAlign: 'center', fontSize: '14px' }}
           >
             HTML
           </p>
         </div>
         <div>
-          <FontAwesomeIcon icon={faCss3} color={"#264de4"} size="3x" />
+          <FontAwesomeIcon icon={faCss3} color={'#264de4'} size="3x" />
           <p
-            style={{ color: "#d0cde1", textAlign: "center", fontSize: "14px" }}
+            style={{ color: '#d0cde1', textAlign: 'center', fontSize: '14px' }}
           >
             CSS
           </p>
         </div>
         <div>
-          <FontAwesomeIcon icon={faJs} color={"#ffda3e"} size="3x" />
+          <FontAwesomeIcon icon={faJs} color={'#ffda3e'} size="3x" />
           <p
-            style={{ color: "#d0cde1", textAlign: "center", fontSize: "14px" }}
+            style={{ color: '#d0cde1', textAlign: 'center', fontSize: '14px' }}
           >
             JS
           </p>
         </div>
         <div>
-          <FontAwesomeIcon icon={faReact} color={"#5dd2f3"} size="3x" />
+          <FontAwesomeIcon icon={faReact} color={'#5dd2f3'} size="3x" />
           <p
-            style={{ color: "#d0cde1", textAlign: "center", fontSize: "14px" }}
+            style={{ color: '#d0cde1', textAlign: 'center', fontSize: '14px' }}
           >
             React
           </p>
         </div>
         <div>
-          <FontAwesomeIcon icon={faNodeJs} color={"#51a03c"} size="3x" />
+          <FontAwesomeIcon icon={faNodeJs} color={'#51a03c'} size="3x" />
           <p
-            style={{ color: "#d0cde1", textAlign: "center", fontSize: "14px" }}
+            style={{ color: '#d0cde1', textAlign: 'center', fontSize: '14px' }}
           >
             NodeJs
           </p>
@@ -87,8 +91,13 @@ const LandingPage = () => {
       </IconsContainer>
       <BtnContainer>
         <span>Looking for developer?</span>
-        <Button>Download Resume
-          <FontAwesomeIcon icon={faDownload} size="1x" color={colors.textColor1} />
+        <Button as="a" href="/resume.pdf" download>
+          Download Resume
+          <FontAwesomeIcon
+            icon={faDownload}
+            size="1x"
+            color={colors.textColor1}
+          />
         </Button>
         <Button>Hire me!!!</Button>
       </BtnContainer>
@@ -111,8 +120,8 @@ const ImgContainer = styled.div`
     top: 0;
     right: -50px;
   }
-  @media (max-width:500px){
-    right:-20px;
+  @media (max-width: 500px) {
+    right: -20px;
   }
 `;
 
@@ -147,7 +156,7 @@ const BtnContainer = styled.div`
   color: #fff;
   margin: 40px 25px;
   flex-wrap: wrap;
-  gap:10px;
+  gap: 10px;
   @media (max-width: 778px) {
     justify-content: center;
   }
@@ -164,30 +173,31 @@ const Button = styled.div`
   font-weight: bold;
   border-radius: 5px;
   margin: 10px;
+  text-decoration: none;
   &:hover {
     box-shadow: inset 300px 0 0 0 ${colors.textColor1};
     color: #fff;
     > * {
-      &:first-child{
+      &:first-child {
         // margin-left:10px;
-        color:#fff;
+        color: #fff;
         transition: 1s;
-       }
+      }
     }
   }
   > * {
-  &:first-child{
-    margin-left:10px;
-   }
+    &:first-child {
+      margin-left: 10px;
+    }
   }
 `;
 
 const Polygon = styled.div`
-  clip-path: polygon(100% 0%,-50% 100%,100% 100%, 100% 100%);;
+  clip-path: polygon(100% 0%, -50% 100%, 100% 100%, 100% 100%);
   height: 130px;
   width: 100%;
   background-color: ${colors.textColor1};
-  z-index:-99;
+  z-index: -99;
 `;
 
 export default LandingPage;
