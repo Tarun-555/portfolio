@@ -1,6 +1,6 @@
-import { useState } from "react";
-import styled, { keyframes } from "styled-components";
-import { colors } from "../assets/constants";
+import { useState } from 'react';
+import styled, { keyframes } from 'styled-components';
+import { colors } from '../assets/constants';
 
 const Header = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -20,12 +20,12 @@ const Header = () => {
       <NavModal isOpen={isModalOpen}>
         <span
           style={{
-            color: "#fff",
-            fontSize: "50px",
-            position: "absolute",
-            right: "10px",
-            top: "10px",
-            cursor: "pointer",
+            color: '#fff',
+            fontSize: '50px',
+            position: 'absolute',
+            right: '10px',
+            top: '10px',
+            cursor: 'pointer',
           }}
           onClick={() => setModalOpen(false)}
         >
@@ -33,11 +33,11 @@ const Header = () => {
         </span>
         <ul
           style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
             transform: `translate(-50%,-50%)`,
-            listStyle: "none",
+            listStyle: 'none',
           }}
         >
           <NavModalItem isOpen={isModalOpen}>Home</NavModalItem>
@@ -72,16 +72,14 @@ const switchColors = keyframes`
 const Logo = styled.div`
   color: ${colors.textColor1};
   font-weight: bold;
-  font-family: "Russo One", sans-serif;
+  font-family: 'Russo One', sans-serif;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 1.6em;
   cursor: pointer;
   &:hover {
     animation-name: ${switchColors};
-    // animation-iteration-count: infinite;
     animation-duration: 3s;
-    // animation-direction: alternate;
   }
 `;
 
@@ -103,6 +101,9 @@ const HeaderListItem = styled.li`
   border-radius: 1rem;
   text-align: center;
   font-weight: bold;
+  text-align: center;
+  line-height: 20px;
+  text-transform: uppercase;
   &:hover {
     background-color: ${colors.textColor1};
     color: #fff;

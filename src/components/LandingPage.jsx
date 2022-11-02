@@ -36,7 +36,7 @@ const LandingPage = () => {
         <DescText>
           I'm Tarun, a Full Stack Web Developer having experience in developing
           web and mobile based applications using React and React Native. I have
-          got 1+ years of experience in developing web applications and looking
+          got 2+ years of experience in developing web applications and looking
           for opportunities to learn, grow and develop.
         </DescText>
       </div>
@@ -131,7 +131,6 @@ const DescText = styled.h2`
   font-family: Saira Semi Condensed, sans-serif;
   letter-spacing: 0.01rem;
   line-height: 2em;
-  text-align: justify;
   margin-top: 20px;
   @media (max-width: 778px) {
     width: 100%;
