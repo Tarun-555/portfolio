@@ -114,7 +114,7 @@ const About = () => {
       </Section>
 
       <Section>
-        <Container>
+        <Container reverse={true}>
           <Left>
             <AnimatedLeft ref={section2} animate={animate2}>
               <RightTitle>Experience</RightTitle>
@@ -170,17 +170,15 @@ const About = () => {
           </Right>
         </Container>
       </Section>
-      {/* <Card
-        Title="Education"
-        backgroundColor="#ccc"
-        body={CardJsx(Education)}
-      /> */}
     </AboutContainer>
   );
 };
 
 const AboutContainer = styled.div`
   padding: 40px 20px;
+  @media (max-width: 500px) {
+    padding: 40px 10px 10px 10px;
+  }
 `;
 
 const Section = styled.div`
@@ -189,10 +187,15 @@ const Section = styled.div`
 
 const Container = styled.div`
   display: flex;
-  width: 100%;
   align-items: center;
   width: 100%;
   margin: 0px 0px 10px 0px;
+  overflow: hidden;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
 `;
 
 const Left = styled.div`
@@ -204,6 +207,10 @@ const Left = styled.div`
   align-items: center;
   padding: 10px 20px;
   color: ${colors.textWhite};
+  @media (max-width: 500px) {
+    width: 90%;
+    height: 100%;
+  }
 `;
 
 const AnimatedLeft = styled.div`
@@ -220,6 +227,10 @@ const Right = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (max-width: 500px) {
+    width: 90%;
+    height: 100%;
+  }
 `;
 
 const AnimatedRight = styled.div`
