@@ -1,18 +1,24 @@
 {
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:prettier/recommended"
-    ],
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 12,
-        "sourceType": "module"
+  "extends": [
+    "eslint:recommended"
+    // "eslint-config-prettier",
+    // "plugin:react/recommended",
+    // "plugin:prettier/recommended",
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "plugins": ["react"],
-    "rules": {
-        "react/react-in-jsx-scope": "off"
-    }
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react"
+    // "plugin:react/recommended",
+    // "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "no-unused-vars": "off"
+  }
 }
