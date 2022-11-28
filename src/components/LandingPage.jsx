@@ -14,7 +14,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const LandingPage = () => {
   return (
-    <div style={{ height: '85%', width: '100%', paddingTop: '50px' }}>
+    <div
+      style={{ height: '85%', width: '100%', paddingTop: '50px' }}
+      id="home-section"
+    >
       <div style={{ padding: '50px 20px', boxSizing: 'border-box' }}>
         <h2
           style={{

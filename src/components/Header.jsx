@@ -1,16 +1,35 @@
 import { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { colors } from '../assets/constants';
+import { scrollIntoViewWithOffset } from '../utils/scrollIntoViewWithOffset';
 
 const Header = () => {
   const [isModalOpen, setModalOpen] = useState(false);
+  const handleClick = (section) => {
+    if (section == 'home') {
+      scrollIntoViewWithOffset('home-section', 70);
+    }
+    if (section == 'about') {
+      scrollIntoViewWithOffset('about-section', 70);
+    }
+    if (section == 'works') {
+      scrollIntoViewWithOffset('work-section', 70);
+    }
+  };
+
   return (
     <HeaderContainer>
-      <Logo>Tarun Ragiri</Logo>
+      <Logo onClick={() => handleClick('home')}>Tarun Ragiri</Logo>
       <HeaderListContainer>
-        <HeaderListItem>Home</HeaderListItem>
-        <HeaderListItem>About</HeaderListItem>
-        <HeaderListItem>Works</HeaderListItem>
+        <HeaderListItem onClick={() => handleClick('home')}>
+          Home
+        </HeaderListItem>
+        <HeaderListItem onClick={() => handleClick('about')}>
+          About
+        </HeaderListItem>
+        <HeaderListItem onClick={() => handleClick('works')}>
+          Works
+        </HeaderListItem>
       </HeaderListContainer>
       <MenuIcon onClick={() => setModalOpen(true)}>
         <Line />
@@ -40,9 +59,33 @@ const Header = () => {
             listStyle: 'none',
           }}
         >
-          <NavModalItem isOpen={isModalOpen}>Home</NavModalItem>
-          <NavModalItem isOpen={isModalOpen}>About</NavModalItem>
-          <NavModalItem isOpen={isModalOpen}>Works</NavModalItem>
+          <NavModalItem
+            isOpen={isModalOpen}
+            onClick={() => {
+              handleClick('home');
+              setModalOpen(false);
+            }}
+          >
+            Home
+          </NavModalItem>
+          <NavModalItem
+            isOpen={isModalOpen}
+            onClick={() => {
+              handleClick('about');
+              setModalOpen(false);
+            }}
+          >
+            About
+          </NavModalItem>
+          <NavModalItem
+            isOpen={isModalOpen}
+            onClick={() => {
+              handleClick('works');
+              setModalOpen(false);
+            }}
+          >
+            Works
+          </NavModalItem>
         </ul>
       </NavModal>
     </HeaderContainer>

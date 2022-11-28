@@ -9,6 +9,7 @@ const Card = (props) => {
         <Image src={props.imgSrc} />
         <CardTitle>{props.title}</CardTitle>
         <CardText>{props.body}</CardText>
+        <SrcLink href={props.source}>source code</SrcLink>
       </ContentWrapper>
     </CardContainer>
   );
@@ -37,25 +38,59 @@ const CardTitle = styled.h1`
   color: ${colors.textWhite};
 `;
 
-const CardText = styled.div``;
+const CardText = styled.div`
+  color: #edf2f4;
+  font-family: monospace;
+  font-size: 14px;
+  padding: 2px;
+`;
+
+const SrcLink = styled.a`
+  color: #ff1b6b;
+  font-weight: bold;
+  display: none;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  opacity: 1;
+  &:hover {
+    cursor: pointer;
+  }
+`;
 
 const ContentWrapper = styled.div`
   height: 100%;
   width: 100%;
   transition: 0.2s all ease-out;
+  position: relative;
   &:hover {
     background-image: url(${(props) => props.bgSrc});
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    // opacity: 0.4;
-    background-color: rgba(0, 0, 0, 0.2);
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.8);
+    }
     ${Image} {
       visibility: hidden;
     }
     ${CardTitle} {
-      opacity: 1;
-      visibility: show;
+      visibility: hidden;
+    }
+    ${CardText} {
+      visibility: hidden;
+    }
+    ${SrcLink} {
+      display: block;
     }
   }
 `;

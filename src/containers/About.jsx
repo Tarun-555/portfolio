@@ -57,7 +57,7 @@ const About = () => {
   }, []);
 
   return (
-    <AboutContainer>
+    <AboutContainer id="about-section">
       <Title>About</Title>
       <Section>
         <Container>
