@@ -39,7 +39,7 @@ const LandingPage = () => {
         <DescText>
           I'm Tarun, a Full Stack Web Developer having experience in developing
           web and mobile based applications using React and React Native. I have
-          got 2+ years of experience in developing web applications and looking
+          got 3.5+ years of experience in developing web applications and looking
           for opportunities to learn, grow and develop.
         </DescText>
       </div>
@@ -94,7 +94,7 @@ const LandingPage = () => {
       </IconsContainer>
       <BtnContainer>
         <span>Looking for developer?</span>
-        <Button as="a" href="/resume.pdf" download>
+        <Button as="a" href="/tarun_resume_24.pdf" download>
           Download Resume
           <FontAwesomeIcon
             icon={faDownload}
@@ -102,7 +102,9 @@ const LandingPage = () => {
             color={colors.textColor1}
           />
         </Button>
-        <Button>Hire me!!!</Button>
+        <a href="mailto:ragiritarun555@gmail.com" enctype="text/plain" style={{textDecoration:'none'}}>
+          <Button>Hire me!!!</Button>
+        </a>
       </BtnContainer>
       <Polygon />
     </div>

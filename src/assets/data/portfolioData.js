@@ -7,20 +7,28 @@ export const Education = {
   Graduation:
     'Graduated in Computer Science at Jawaharlal Nehru Technological University Hyderabad in the year 2020.',
   XII: 'Completed XII from Narayana Junior College.',
+  GraduationPercentage:'Grade : 7.4 CGPA',
+  XIIPercentage:'Percentage : 96.2 %'
 };
 
 export const Experience = {
+  Teksystems: [
+    `Work with reputated clients like HPE and Mercedes Benz R&D in developing new features and maintaining web applications.`,
+    `Collaborate with cross-functional teams to identify and prioritize features and requirements.`,
+    `Troubleshoot and resolve software defects and issues.`,
+    `Explored tech stacks which include React, Material UI, graphql, GitHub actions, Relay etc.`,
+  ],
   Propertyloop: [
-    `Currently working as Full Stack Devloper on developing application on both frontend and
-    backend areas in developing responsive UI, creating APIs, fixing
+    `worked as Full Stack Devloper on developing application on both frontend and backend areas in developing responsive UI, creating APIs, fixing
     bugs, writing clean and error free code.`,
-    `working on bunch of tech
-    stacks which includes Javascript, React with Ionic, Nodejs, Nestjs,
+    `Conducted code reviews to improve code quality, followed agile practices to contribute and deliver better productivity.`,
+    `working on bunch of tech stacks which includes Javascript, React with Ionic, Nodejs, Nestjs,
     MySql, Azure Micro services etc.`,
   ],
   Panorbit: [
-    `Worked as Junior Software Devloper in Panorbit in developing responsive web and
+    `Worked as Junior Software Devloper in Panorbit, a startup environment in developing responsive web and
     mobile applications.`,
+    `Worked in developing responsive web and mobile applications.`,
     `Worked on Tech Stacks like React, React Native, Javascript etc.`,
   ],
 };

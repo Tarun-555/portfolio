@@ -41,6 +41,7 @@ const About = () => {
     const section2Pos = topPos(section2.current);
 
     const onScroll = () => {
+      // eslint-disable-next-line no-undef
       const scrollPos = window.scrollY + window.innerHeight;
 
       if (section1Pos < scrollPos) {
@@ -50,8 +51,10 @@ const About = () => {
         setAnimate2(true);
       }
     };
+    // eslint-disable-next-line no-undef
     window.addEventListener('scroll', onScroll);
     return () => {
+      // eslint-disable-next-line no-undef
       window.removeEventListener('scroll', onScroll);
     };
   }, []);
@@ -88,6 +91,7 @@ const About = () => {
                     <h5>March 2015 - March 2020</h5>
                   </SubTextTitle>
                   <SubText>{Education.Graduation}</SubText>
+                  <SubText>{Education.GraduationPercentage}</SubText>
                 </div>
               </div>
 
@@ -106,6 +110,7 @@ const About = () => {
                     <h5>March 2013 - March 2015</h5>
                   </SubTextTitle>
                   <SubText>{Education.XII}</SubText>
+                  <SubText>{Education.XIIPercentage}</SubText>
                 </div>
               </div>
             </AnimatedRight>
@@ -115,9 +120,30 @@ const About = () => {
 
       <Section>
         <Container reverse={true}>
-          <Left>
+          <Left style={{height:'100%'}}>
             <AnimatedLeft ref={section2} animate={animate2}>
               <RightTitle>Experience</RightTitle>
+
+              <div
+                style={{ display: 'flex', width: '100%', marginBottom: '20px' }}
+              >
+                <span style={{ marginTop: '2px', marginRight: '8px' }}>
+                  <FontAwesomeIcon
+                    icon={faBriefcase}
+                    color={colors.textColor1}
+                  />
+                </span>
+                <div>
+                  <SubTextTitle>
+                    <h3>Teksystems</h3>
+                    <h5>December 2022 - Present</h5>
+                  </SubTextTitle>
+                  {Experience.Teksystems.map((item) => (
+                    <SubText>{item}</SubText>
+                  ))}
+                </div>
+              </div>
+
               <div
                 style={{ display: 'flex', width: '100%', marginBottom: '20px' }}
               >
@@ -130,7 +156,7 @@ const About = () => {
                 <div>
                   <SubTextTitle>
                     <h3>Propertyloop</h3>
-                    <h5>March 2022 - Present</h5>
+                    <h5>March 2022 - November 2022</h5>
                   </SubTextTitle>
                   {Experience.Propertyloop.map((item) => (
                     <SubText>{item}</SubText>
@@ -159,7 +185,7 @@ const About = () => {
               </div>
             </AnimatedLeft>
           </Left>
-          <Right>
+          <Right style={{height:'100%'}}>
             <AnimatedRight ref={section2} animate={animate2}>
               <img
                 src={experienceImg}
