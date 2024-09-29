@@ -39,7 +39,7 @@ const LandingPage = () => {
         <DescText>
           I'm Tarun, a Full Stack Web Developer having experience in developing
           web and mobile based applications using React and React Native. I have
-          got 3.5+ years of experience in developing web applications and looking
+          got {new Date().getFullYear() - new Date('01-01-2021').getFullYear()}.{new Date().getMonth()}+ years of experience in developing web applications and looking
           for opportunities to learn, grow and develop.
         </DescText>
       </div>
