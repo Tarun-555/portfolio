@@ -94,7 +94,7 @@ const LandingPage = () => {
       </IconsContainer>
       <BtnContainer>
         <span>Looking for developer?</span>
-        <Button as="a" href="/tarun_resume_24.pdf" download>
+        <Button as="a" href="/Resume24bgr.pdf" download>
           Download Resume
           <FontAwesomeIcon
             icon={faDownload}
