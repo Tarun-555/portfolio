@@ -1,10 +1,10 @@
 import './App.css';
 import React from 'react';
 // import Carousel from './components/Carousel';
-const Header = React.lazy(() =>'./components/Header');
-const LandingPage = React.lazy(() =>'./components/LandingPage');
-const About = React.lazy(() => './containers/About');
-const Works = React.lazy(() => './containers/Works');
+const Header = React.lazy(() => import('./components/Header'));
+const LandingPage = React.lazy(() => import('./components/LandingPage'));
+const About = React.lazy(() => import('./containers/About'));
+const Works = React.lazy(() => import('./containers/Works'));
 
 function App() {
   return (
