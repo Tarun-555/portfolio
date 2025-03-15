@@ -9,8 +9,9 @@ const Works = () => {
     <WorksContainer id="work-section">
       <Title>Works</Title>
       <CardsContainer>
-        {Projects.map((project) => (
+        {Projects.map((project, id) => (
           <Card
+            key={id}
             imgSrc={project.img}
             title={project.title}
             body={<>{project.text}</>}

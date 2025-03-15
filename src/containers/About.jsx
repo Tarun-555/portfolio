@@ -138,8 +138,8 @@ const About = () => {
                     <h3>Teksystems</h3>
                     <h5>December 2022 - Present</h5>
                   </SubTextTitle>
-                  {Experience.Teksystems.map((item) => (
-                    <SubText>{item}</SubText>
+                  {Experience.Teksystems.map((item, id) => (
+                    <SubText key={id}>{item}</SubText>
                   ))}
                 </div>
               </div>
@@ -158,8 +158,8 @@ const About = () => {
                     <h3>Propertyloop</h3>
                     <h5>March 2022 - November 2022</h5>
                   </SubTextTitle>
-                  {Experience.Propertyloop.map((item) => (
-                    <SubText>{item}</SubText>
+                  {Experience.Propertyloop.map((item, id) => (
+                    <SubText key={id}>{item}</SubText>
                   ))}
                 </div>
               </div>
@@ -178,8 +178,8 @@ const About = () => {
                     <h3>Panorbit</h3>
                     <h5>January 2021 - March 2022</h5>
                   </SubTextTitle>
-                  {Experience.Panorbit.map((item) => (
-                    <SubText>{item}</SubText>
+                  {Experience.Panorbit.map((item, id) => (
+                    <SubText key={id}>{item}</SubText>
                   ))}
                 </div>
               </div>
