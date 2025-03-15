@@ -2,10 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { colors } from '../assets/constants';
 import Card from '../components/Card';
-import portfolioImg from '../assets/portfolio_screenshot.png';
-import foodappImg from '../assets/foodapp_screenshot.png';
-import mernImg from '../assets/mern.png';
-import toastImg from '../assets/not_screenshot.png';
 import { Projects } from '../assets/data/portfolioData';
 
 const Works = () => {

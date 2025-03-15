@@ -4,27 +4,27 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faBriefcase,
   faGraduationCap,
-  faStarOfLife,
+  // faStarOfLife,
 } from '@fortawesome/free-solid-svg-icons';
 import { colors } from '../assets/constants';
 import { Education, Experience } from '../assets/data/portfolioData';
 import educationImg from '../assets/svg/education.svg';
 import experienceImg from '../assets/svg/experience.svg';
 
-const CardJsx = (data) => {
-  return (
-    data &&
-    data.length > 0 &&
-    data.map((item) => {
-      return (
-        <List>
-          <FontAwesomeIcon icon={faStarOfLife} />
-          <span>{item}</span>
-        </List>
-      );
-    })
-  );
-};
+// const CardJsx = (data) => {
+//   return (
+//     data &&
+//     data.length > 0 &&
+//     data.map((item) => {
+//       return (
+//         <List>
+//           <FontAwesomeIcon icon={faStarOfLife} />
+//           <span>{item}</span>
+//         </List>
+//       );
+//     })
+//   );
+// };
 
 const About = () => {
   const section1 = useRef(null);
